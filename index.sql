@@ -114,3 +114,11 @@ SELECT * FROM species WHERE conservation_status = 'Endangered';
 
 SELECT COUNT(DISTINCT species_id) AS unique_species_count
 FROM sightings;
+
+SELECT * FROM sightings WHERE location ILIKE '%Pass%';
+
+SELECT r.name, COUNT(s.sighting_id) AS total_sightings
+FROM rangers r
+    LEFT JOIN sightings s ON r.ranger_id = s.ranger_id
+GROUP BY
+    r.name;
