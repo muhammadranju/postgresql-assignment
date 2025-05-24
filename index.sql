@@ -109,3 +109,5 @@ VALUES (
 INSERT INTO
     rangers (name, region)
 VALUES ('Derek Fox', 'Coastal Plains');
+
+SELECT * FROM species WHERE conservation_status = 'Endangered';
