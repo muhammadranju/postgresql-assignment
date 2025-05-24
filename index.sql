@@ -105,3 +105,7 @@ VALUES (
         '2024-05-18 18:30:00',
         NULL
     );
+
+INSERT INTO
+    rangers (name, region)
+VALUES ('Derek Fox', 'Coastal Plains');
