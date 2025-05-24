@@ -111,3 +111,6 @@ INSERT INTO
 VALUES ('Derek Fox', 'Coastal Plains');
 
 SELECT * FROM species WHERE conservation_status = 'Endangered';
+
+SELECT COUNT(DISTINCT species_id) AS unique_species_count
+FROM sightings;
