@@ -106,23 +106,26 @@ VALUES (
         NULL
     );
 
+-- problem 1 --
 INSERT INTO
     rangers (name, region)
 VALUES ('Derek Fox', 'Coastal Plains');
 
-SELECT * FROM species WHERE conservation_status = 'Endangered';
-
+--  problem 2 --
 SELECT COUNT(DISTINCT species_id) AS unique_species_count
 FROM sightings;
 
+-- problem 3 --
 SELECT * FROM sightings WHERE location ILIKE '%Pass%';
 
+-- problem 4 --
 SELECT r.name, COUNT(s.sighting_id) AS total_sightings
 FROM rangers r
     LEFT JOIN sightings s ON r.ranger_id = s.ranger_id
 GROUP BY
     r.name;
 
+-- problem 5 --
 SELECT common_name
 FROM species
 WHERE
@@ -132,6 +135,7 @@ WHERE
         FROM sightings
     );
 
+-- problem 6 --
 SELECT sp.common_name, s.sighting_time, r.name
 FROM
     sightings s
@@ -140,12 +144,17 @@ FROM
 ORDER BY s.sighting_time DESC
 LIMIT 2;
 
+-- problem 7 --
 UPDATE species
 SET
     conservation_status = 'Historic'
 WHERE
-    discovery_date < '1800-01-01';
+    extract(
+        YEAR
+        FROM discovery_date
+    ) < 1800;
 
+-- problem 8 --
 SELECT
     sighting_id,
     CASE
@@ -161,6 +170,7 @@ SELECT
     END AS time_of_day
 FROM sightings;
 
+-- problem 9 --
 DELETE FROM rangers
 WHERE
     ranger_id NOT IN (
