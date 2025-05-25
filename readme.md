@@ -1,4 +1,4 @@
-## What is PostgreSQL?
+## 1. What is PostgreSQL?
 
 PostgreSQL (Postgres) হলো একটি জনপ্রিয় open-source relational database system, যা SQL ও JSON দুই ধরনের data সাপোর্ট করে। ACID-compliant হওয়ায় data safe থাকে। এতে আছে:
 
@@ -13,7 +13,7 @@ PostgreSQL (Postgres) হলো একটি জনপ্রিয় open-source r
 
 ---
 
-## Purpose of a Database Schema in PostgreSQL
+## 2. Purpose of a Database Schema in PostgreSQL
 
 Schema হলো database-এর ভেতরে logical folder, যা table, view ইত্যাদি organize করে।
 
@@ -29,7 +29,7 @@ Schema হলো database-এর ভেতরে logical folder, যা table, v
 
 ---
 
-## Difference Between VARCHAR and CHAR
+## 3. Difference Between VARCHAR and CHAR
 
 | বৈশিষ্ট্য | CHAR                     | VARCHAR            |
 | --------- | ------------------------ | ------------------ |
@@ -42,7 +42,7 @@ Schema হলো database-এর ভেতরে logical folder, যা table, v
 
 ---
 
-## LIMIT এবং OFFSET কী?
+## 4. LIMIT এবং OFFSET কী?
 
 - `LIMIT`: কতটি row return করবে।
 - `OFFSET`: কতটি row skip করবে।
@@ -59,7 +59,7 @@ SELECT * FROM customers ORDER BY id LIMIT 10 OFFSET 20;
 
 ---
 
-## UPDATE দিয়ে Data পরিবর্তন
+## 5. UPDATE দিয়ে Data পরিবর্তন
 
 `UPDATE` টেবিলের ডেটা পরিবর্তনের জন্য ব্যবহৃত হয়।
 
